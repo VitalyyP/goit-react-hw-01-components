@@ -1,4 +1,4 @@
-import PropTypew from 'prop-types';
+import PropTypew, { string } from 'prop-types';
 // import React from 'react';
 import ReactDOM from "react-dom";
 
@@ -31,34 +31,45 @@ const data = {
   },
 };
 
-const profile = (
-  <div class="profile">
-    <div class="description">
-      <img
-        src={data.avatar}
-        alt="Аватар пользователя"
-        class="avatar"
-      />
-      <p class="name">{data.name}</p>
-      <p class="tag">@{data.tag}</p>
-      <p class="location">{data.location}</p>
-    </div>
+// function Profile({ avatar, name, tag, location, stats.followers, stats.views, stats.likes, }) {
+//   return <div class="profile">
+//     <div class="description">
+//       <img
+//         src={avatar}
+//         alt="Аватар пользователя"
+//         class="avatar"
+//       />
+//       <p class="name">{name}</p>
+//       <p class="tag">@{tag}</p>
+//       <p class="location">{location}</p>
+//     </div>
 
-    <ul class="stats">
-      <li>
-        <span class="label">{data.stats.followers}</span>
-        <span class="quantity">1000</span>
-      </li>
-      <li>
-        <span class="label">{data.stats.views}</span>
-        <span class="quantity">2000</span>
-      </li>
-      <li>
-        <span class="label">{data.stats.likes}</span>
-        <span class="quantity">3000</span>
-      </li>
-    </ul>
-  </div>
-);
+//     <ul class="stats">
+//       <li>
+//         <span class="label">{stats.followers}</span>
+//         <span class="quantity">1000</span>
+//       </li>
+//       <li>
+//         <span class="label">{stats.views}</span>
+//         <span class="quantity">2000</span>
+//       </li>
+//       <li>
+//         <span class="label">{stats.likes}</span>
+//         <span class="quantity">3000</span>
+//       </li>
+//     </ul>
+//   </div>
+// }
 
-ReactDOM.render(profile, document.querySelector('#root'));
+ReactDOM.render(<Profile />, document.querySelector('#root'));
+
+
+// Profile.propTypes = {
+//   avatar: PropTypes.string,
+//   name: PropTypes.string,
+//   tag: PropTypes.string,
+//   location: PropTypes.string,
+//   stats.followers: PropTypes.number,
+//   stats.views: PropTypes.number,
+//   stats.likes: PropTypes.number,
+// }
